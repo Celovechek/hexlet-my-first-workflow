@@ -1,8 +1,11 @@
 name: hexlet-my-first-workflow
-on: push
 jobs:
-  my-job:
+  say-hello-job:
     runs-on: ubuntu-latest
+
     steps:
-      - name: first-step
-        run: make say-hello
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run say-hello
+      run: make say-hello
